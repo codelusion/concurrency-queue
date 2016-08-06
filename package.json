@@ -1,0 +1,16 @@
+{
+  "name": "throttled-queue",
+  "version": "1.0.0",
+  "description": "A queue that holds jobs, releasing only a fixed number for concurrent processing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ash@aisaac.io",
+  "license": "MIT",
+  "dependencies": {
+    "events": "^1.1.1",
+    "util": "^0.10.3",
+    "uuid": "^2.0.2"
+  }
+}
