@@ -12,5 +12,9 @@
     "events": "^1.1.1",
     "util": "^0.10.3",
     "uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.1"
   }
 }
