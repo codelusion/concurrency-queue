@@ -1,5 +1,5 @@
 {
-  "name": "throttled-queue",
+  "name": "concurrency-queue",
   "version": "1.0.0",
   "description": "A queue that holds jobs, releasing only a fixed number for concurrent processing",
   "main": "index.js",

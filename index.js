@@ -1,20 +1,23 @@
 'use strict';
 
-var ThrottledQueue = require('./lib/ThrottledQueue');
+var ConcurrencyQueue = require('./lib/ConcurrencyQueue');
 
 module.exports.createInstance = function (options) {
-    var tq = new ThrottledQueue(options);
-    var events = ['ready', 'queued', 'unknown'];
+    var cQ = new ConcurrencyQueue(options);
+    var events = ['ready', 'queued', 'drained', 'unknown'];
     events.forEach(function (eventName) {
         var optionName = 'on' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
         if (options[optionName]) {
             var eventHandler = options[optionName];
-            tq.on(eventName, eventHandler);
+            cQ.on(eventName, eventHandler);
         }
     });
 
     return {
-        push: tq.push.bind(tq),
-        drain: tq.drain.bind(tq)
+        push: cQ.push.bind(cQ),
+        drain: cQ.drain.bind(cQ),
+        on: function(eventName, eventHandler) {
+            cQ.on(eventName, eventHandler);
+        }
     }
 };
