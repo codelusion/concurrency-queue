@@ -1,5 +1,6 @@
 # concurrency-queue
-A queue that holds jobs, releasing only a fixed number for concurrent processing.
+A lightweight, minimalist FIFO queue that holds jobs, releasing only a fixed number 
+for concurrent processing.
 
 ## Usage
 
@@ -47,6 +48,7 @@ cQ.on('drained', function (job, jobId, status) {
     //job with jobId has been drained from the queue
 });
 ```
+Finally an 'empty' event is fired when the last job is drained from the queue.
 
 For examples see the `/examples/` folder.
 

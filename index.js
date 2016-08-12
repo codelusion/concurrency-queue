@@ -4,7 +4,7 @@ var ConcurrencyQueue = require('./lib/ConcurrencyQueue');
 
 module.exports.createInstance = function (options) {
     var cQ = new ConcurrencyQueue(options);
-    var events = ['ready', 'queued', 'drained', 'unknown'];
+    var events = ['ready', 'queued', 'drained', 'empty', 'unknown'];
     events.forEach(function (eventName) {
         var optionName = 'on' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
         if (options[optionName]) {

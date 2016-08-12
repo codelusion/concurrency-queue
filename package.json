@@ -1,6 +1,6 @@
 {
   "name": "concurrency-queue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A queue that holds jobs, releasing only a fixed number for concurrent processing",
   "main": "index.js",
   "scripts": {
