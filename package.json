@@ -1,7 +1,7 @@
 {
   "name": "concurrency-queue",
-  "version": "1.0.7",
-  "description": "A lightweight, minimalist FIFO queue that holds jobs, releasing only a fixed number for concurrent processing",
+  "version": "1.0.8",
+  "description": "A lightweight, concurrency-throttled FIFO queue",
   "keywords": "concurrency-queue, concurrency, queue, FIFO, throttling",
   "main": "index.js",
   "scripts": {
